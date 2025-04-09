@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: ldj6xbuti-python
+  janus-idp.io/tekton: ldj6xbuti-python
+  backstage.io/kubernetes-id: ldj6xbuti-python
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: ldj6xbuti-python
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
